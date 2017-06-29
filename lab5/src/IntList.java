@@ -49,12 +49,11 @@ public class IntList {
 
     @Override
     public String toString() {
-        String result = "( ";
+        String result = new String("( ");
         for (int i = 0; i < this.size(); i++) {
-            result.concat(String.valueOf(this.get(i)));
-            result.concat(" ");
+            result = result.concat(String.valueOf(this.get(i))).concat(" ");
         }
-        result.concat(")");
+        result = result.concat(")");
         return result;
     }
 
@@ -78,7 +77,11 @@ public class IntList {
     }
 
     public void add(int item) {
-        this.next = new IntList(item);
+        IntList temp = this;
+        for (int i = 1; i < this.size(); i++) {
+            temp = temp.next();
+        }
+        temp.next = new IntList(item);
     }
 
     public int smallest() {
@@ -92,6 +95,25 @@ public class IntList {
     }
 
     public static IntList append(IntList l1, IntList l2) {
+        if (l1 == null && l2 == null) {
+            return null;
+        } else if (l1 == null) {
+            IntList result = new IntList(l2.item());
+            IntList temp = result;
+            for (int i = 1; i < l2.size(); i++) {
+                temp.next = new IntList(l2.get(i));
+                temp = temp.next();
+            }
+            return result;
+        } else if (l2 == null) {
+            IntList result = new IntList(l1.item());
+            IntList temp = result;
+            for (int i = 1; i < l1.size(); i++) {
+                temp.next = new IntList(l1.get(i));
+                temp = temp.next();
+            }
+            return result;
+        }
         IntList result = new IntList(l1.item());
         IntList temp = result;
         for (int i = 1; i < l1.size(); i++) {
@@ -103,6 +125,25 @@ public class IntList {
             temp = temp.next();
         }
         return result;
+    }
+
+    /** Returns an IntList consisting of the elements in ITEMS.
+     * IntList L = IntList.list(1, 2, 3);
+     * System.out.println(L.toString()) // Prints (1 2 3) */
+    public static IntList list(int... items) {
+        /** Check for cases when we have no element given. */
+        if (items.length == 0) {
+            return null;
+        }
+        /** Create the first element. */
+        IntList head = new IntList(items[0]);
+        IntList last = head;
+        /** Create rest of the list. */
+        for (int i = 1; i < items.length; i++) {
+            last.next = new IntList(items[i]);
+            last = last.next;
+        }
+        return head;
     }
 
 }
