@@ -1,4 +1,4 @@
-# Algorithms Conclusions
+# Conclusions of Algorithms
 
 ## 1. [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes)
 It's one of the fastest prime number finding algorithms.To find all the prime numbers less than or equal to a given integer n by Eratosthenes' method:
@@ -18,7 +18,7 @@ It's one of the fastest prime number finding algorithms.To find all the prime nu
                 }
             }
         }
-        ArrayList< Integer > primeNum = new ArrayList<>();
+        ArrayList<Integer> primeNum = new ArrayList<>();
         for (int i = 1; i < n; i++) {
             if (list[i]) {
                 primeNum.add(i + 1);
@@ -28,3 +28,26 @@ It's one of the fastest prime number finding algorithms.To find all the prime nu
     }
 </code></pre>
 This algorithm produces all primes not greater than n. It includes a common optimization, which is to start enumerating the multiples of each prime i from i2. The time complexity of this algorithm is O(n log log n),[8] provided the array update is an O(1) operation, as is usually the case.
+
+## 2. Asymptotic Analysis
+
+### Notation
+1. Big-Theta: f(n) is in Θ(g(n)) if and only if f(n) is proportional to g(n) as n approaches infinity.
+2. Big-Oh: If f(n) is in O(g(n)), it means f is in a set of functions that are upper-bounded by g.
+3. Big-Omega: If f(n) is in Ω(g(n)), it means f is in a set of functions that are lower-bounded by g.
+
+### Commonly-Occurring Orders of growth
+* **constant time**
+* **logarithmic time** or proportional to *logN*
+* **linear time** or proportional to *N*
+* **quadratic/polynomial time** or proportional to *N2*
+* **exponential time** or proportional to *kN*
+* **factorial time** or proportional to *N!*
+
+### Useful Formulas
+* 1+2+3+4+⋯+N is in Θ(N2)
+* There are N terms in the sequence 1,2,3,4,⋯,N
+* 1+2+4+8+⋯+N is in Θ(N)
+* There are logN terms in the sequence 1,2,4,8,⋯,N
+* The number of nodes in a tree, N, is equal to kh where k is the branching factor and h is the height of the tree
+* All logarithms are proportional to each other by the Change of Base formula so we can express them generally as just log.
