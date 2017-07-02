@@ -7,5 +7,6 @@
 * lab05: Basic single linked list;
 * **lab06:** Advanced single linked List & double linked list;
 * **lab07:** Asymptotic analysis and some analysis quizzes;
-* lab08: Testing, exceptions, consistency checkers(isOk) and invariant relationships
-* lab09: Collections including List, Set and so on.
+* lab08: Testing, exceptions, consistency checkers(isOk) and invariant relationships;
+* lab09: Collections including List, Set and so on;
+* lab10: Generics and Iterator & Iterable;
