@@ -10,3 +10,4 @@
 * lab08: Testing, exceptions, consistency checkers(isOk) and invariant relationships;
 * lab09: Collections including List, Set and so on;
 * lab10: Generics and Iterator & Iterable;
+* **lab11**: Java 8 Higher Order Functions and Streams
