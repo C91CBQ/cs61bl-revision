@@ -12,4 +12,5 @@
 * lab10: Generics and Iterator & Iterable;
 * **lab11**: Java 8 Higher Order Functions and Streams;
 * lab12: Simple trees and Binary Tree;
-* lab13: depth-first and breath-first traversal and BST
+* lab13: Depth-first and breath-first traversal and BST;
+* **lab14**: Binary Search Tree basic operations;
