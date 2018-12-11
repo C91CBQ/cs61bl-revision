@@ -1,5 +1,6 @@
 # cs61bl-revision
 ## revision of java and basic data structure & algorithm
+https://sp18.datastructur.es/
 * lab01: Leap year;
 * lab02: Basic logic programming;
 * **lab03:** Algorithm for finding prime numbers;
